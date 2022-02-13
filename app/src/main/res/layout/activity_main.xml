@@ -90,6 +90,7 @@
         android:layout_marginBottom="12dp"
         android:text="@string/result"
         android:textSize="16sp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/tilForm"
         app:layout_constraintTop_toBottomOf="@id/tilForm" />
 
@@ -100,13 +101,14 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="12dp"
-        android:text="@string/price"
         android:textAlignment="textEnd"
         android:textColor="@color/black"
         android:textSize="16sp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@id/spToCurrency"
         app:layout_constraintStart_toEndOf="@id/tvTitleResult"
-        app:layout_constraintTop_toBottomOf="@id/tilForm" />
+        app:layout_constraintTop_toBottomOf="@id/tilForm"
+        tools:text="@string/price" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnConvert"
@@ -118,4 +120,14 @@
         app:layout_constraintEnd_toEndOf="@id/spToCurrency"
         app:layout_constraintStart_toStartOf="@id/tilForm"
         app:layout_constraintTop_toBottomOf="@id/tvResult" />
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
